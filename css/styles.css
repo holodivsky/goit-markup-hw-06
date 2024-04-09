@@ -1,3 +1,4 @@
+/* *General styles */
 body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -75,10 +76,6 @@ img {
 
 .general-container {
     margin-bottom: 72px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
 }
 
 /* *Header */
@@ -230,9 +227,6 @@ img {
 
 
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-top: 72px;
     padding-bottom: 72px;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg_mob.jpg);
@@ -415,6 +409,8 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd;
+    display: block;
+    margin-bottom: 17.5px;
 }
 
 .footer {
@@ -452,6 +448,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    margin-bottom: 16px;
 }
 
 .footer-text {
@@ -465,7 +462,9 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    margin-bottom: 16px;
 }
+
 
 .footer-input {
     position: relative;
@@ -859,11 +858,15 @@ img {
 
     /* Qualities */
     .qualities-list {
-        column-gap: 24px;
+        gap: 72px 24px;
     }
 
     .qualities-list-item {
         width: calc((100% - 24px) / 2);
+    }
+
+    .qualities-list-item:not(:last-child) {
+        margin-bottom: 0;
     }
 
     .qualities-item-header {
@@ -901,15 +904,16 @@ img {
     }
 
     /* Footer */
-    .footer-container {
-        padding-left: 108px;
-        padding-right: 164px;
+    .general-container {
+        margin-bottom: 0;
     }
 
-    .text-media-container {
+    .footer-container {
         display: flex;
-        justify-content: center;
-        gap: 24px;
+        padding-left: 108px;
+        padding-right: 164px;
+        flex-wrap: wrap;
+        gap: 72px 24px;
     }
 
     .footer-text {
@@ -1107,6 +1111,16 @@ img {
         width: calc((100% - 3*24px) / 4);
     }
 
+    .qualities-item-header {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .qualities-item-text {
+        font-weight: 400;
+    }
+
     .qualities-list {
         gap: 24px;
     }
@@ -1181,10 +1195,10 @@ img {
 
     /* Footer */
     .footer-container {
-        display: flex;
+        flex-wrap: nowrap;
         padding-left: 16px;
         padding-right: 16px;
-        justify-content: center;
+        gap: 0;
     }
 
     .footer-text-container {
@@ -1193,10 +1207,6 @@ img {
 
     .footer-logo {
         margin-right: auto;
-    }
-
-    .text-media-container {
-        gap: 0;
     }
 
     .social-media-container {
@@ -1331,7 +1341,10 @@ img {
         line-height: 1.17;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        /* align-items: center; */
+    }
+
+    .addsress-list li:first-child {
+        margin-bottom: 12px;
     }
 
     .addsress-list-item:hover {
